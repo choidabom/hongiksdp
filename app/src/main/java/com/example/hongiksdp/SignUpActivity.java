@@ -5,7 +5,14 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class SignUpActivity extends AppCompatActivity {
     private static final String TAG = "SignUpActivity";
@@ -26,8 +33,9 @@ public class SignUpActivity extends AppCompatActivity {
         super.onStart();
         // Check if user is signed in (non-null) and update UI accordingly.
         FirebaseUser currentUser = mAuth.getCurrentUser();
-        updateUI(currentUser);
     }
+
+
 
     View.OnClickListener onClickListener = new View.OnClickListener() {
         @Override
@@ -39,14 +47,14 @@ public class SignUpActivity extends AppCompatActivity {
                 break;
             }
         }
-    }
+    };
     private void signUp(){
-        String email = ((EditText)findViewById(R.id.emailEditText).getText().toString();
-        String password = ((EditText)findViewById(R.id.passwordEditTextEditText).getText().toString();
+        String email = ((EditText)findViewById(R.id.emailEditText)).getText().toString();
+        String password = ((EditText)findViewById(R.id.passwordEditText)).getText().toString();
 
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
+                    //@Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
@@ -56,7 +64,8 @@ public class SignUpActivity extends AppCompatActivity {
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "createUserWithEmail:failure", task.getException());
-                            //UI 실패 로직
+                           //UI 실패로직
+
                         }
 
                         // ...
