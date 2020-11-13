@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "592263746201",
+    "firebase_url": "https://hongiksdp.firebaseio.com",
+    "project_id": "hongiksdp",
+    "storage_bucket": "hongiksdp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:592263746201:android:47d71d65ce2d4ad3d99e08",
+        "android_client_info": {
+          "package_name": "com.example.hongiksdp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "592263746201-5c1mcd1qj0d9j3nkvji4b5gi2t9v9vck.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0qsTOpvtpD-HlCPu3jicrbuTOE41ZkgM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "592263746201-5c1mcd1qj0d9j3nkvji4b5gi2t9v9vck.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
